@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Chat</title>
+    <!-- Include MQTT client library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.7/mqtt.min.js"></script>
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <h1>MQTT Chat</h1>
+    <!-- Input field for message -->
+    <input type="text" id="messageInput" placeholder="Enter message">
+    <!-- Button to publish message -->
+    <button onclick="publishMessage()">Publish</button>
+    <!-- Container to display received messages -->
+    <div id="messageContainer"></div>
+
+    <!-- Your JavaScript code here -->
+    <script>
+        // MQTT broker configuration
+        var mqttBroker = 'ws://mqtt.example.com:9001'; // Change this to your MQTT broker URL
+
+        // Create a MQTT client instance
+        var client = mqtt.connect(mqttBroker);
+
+        // Function to handle message received
+        client.on('message', function (topic, message) {
+            // Display received message in the message container
+            document.getElementById('messageContainer').innerHTML += '<p>Topic: ' + topic + ', Message: ' + message.toString() + '</p>';
+        });
+
+        // Function to publish message
+        function publishMessage() {
+            // Get message from input field
+            var message = document.getElementById('messageInput').value;
+            // Publish message to topic
+            client.publish('hello/topic', message);
+        }
+
+        // Subscribe to MQTT topic
+        client.on('connect', function () {
+            client.subscribe('hello/topic', function (err) {
+                if (!err) {
+                    console.log('Subscribed to hello/topic');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
