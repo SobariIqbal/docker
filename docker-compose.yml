@@ -4,13 +4,13 @@
       image: nginx
       volumes:
         - ./site/index.html:/usr/share/nginx/html/index.html
+        - ./site/nginx.conf:/etc/nginx/conf.d/nginx.conf
+        - ./certificates/:/etc/nginx/certs/
       ports:
         - "443:443"
-        - "80:80" 
+        - "80:80"
+      
         
-
-  
-  
   # mqtt5 eclipse-mosquitto
     mqtt5:
       image: eclipse-mosquitto
@@ -25,14 +25,7 @@
       restart: unless-stopped
 
     # volumes for mapping data,config and log
-  volumes:
-   config:
-   data:
-   log:
- 
-  networks:
-   default:
-     name: mqtt5-network
+
 
 
 

@@ -1,34 +1,44 @@
-# How to use environment variables in nginx config with Docker Compose?
+How to make a Chatt App in your webbrowser using nginx as webserver and MQTT as broker, both running on docker. On **windows**
+1. Download docker here https://www.docker.com/products/docker-desktop/
+2. Download th zip file
+3. Delete the nginx-selfsigned.crt 
+4. Delete the nginx-selfsigned.key
+5. Make your own nginx-selfsigned.crt and nginx-selfsigned.key file
+6. Download https://slproweb.com/products/Win32OpenSSL.html
+  **Update PATH Environment Variable**: If OpenSSL is already installed but not included in the PATH environment variable, you can update the PATH to include the directory where OpenSSL is installed. The method for updating the PATH varies depending on your operating system.
 
-nginx Docker image can [extract environment variables before it starts](https://github.com/docker-library/docs/tree/master/nginx#using-environment-variables-in-nginx-configuration-new-in-119), which can be leveraged to use environment variables in the nginx config, but it comes with a few caveats.
+ 6.1    - **Windows**: 
+        - Open Control Panel.
+        - Go to System > Advanced system settings.
+        - Click on the "Environment Variables" button.
+        - In the System Variables section, select the "Path" variable and click "Edit".
+        - Add the directory path where OpenSSL is installed (e.g., `C:\OpenSSL-Win64\bin`) to the list of paths.
+        - Click OK to save the changes.
 
-This repo demonstrates a way of setting it up with Docker Compose. The flow is:
+7. Use this command in the therminal in the C:\"yourPath"\docker\certificate file to make your own key and certificate with your own signature
+   openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
+   and follow the instructions that are given
+8. Create your own Authentication for your MQTT broker with your own name and password
+9. Download the MQTT client tool https://mosquitto.org/download/
+10. Do the same steps like in step 6.1 but then with the MQTT client tool
+11. Use this command to create a new user, they will ask to make a password
+    mosquitto_passwd -c C:\"yourPath"\docker\config\password.txt "yourName"
+12. Now your MQTT broker will be authenticated and your webserver will be encrypted(SSL)
+13. Now it is time to start Docker and run MQTT and Nginx. You can do that with this command
+    C:\"yourPath"\docker\ docker compose up
+14. In the docker desktop software you can check if your containers (MQTT, Nginx) is running it will be marked green if it is.
+15. Open two seperate tabs in your browser and go to this link https://localhost/ 
+16. if everything is working you can now chat with eachother using to diffrent tabs. (you can use diffrent webbrowsers for this)
+17. **optional** If you want to check if your MQTT broker is authenticated you can download https://mqtt-explorer.com to check if you can connect to the your MQTT broker
+    use this as your setting to connect your the broker
+    Name: "Doesntmatter"
+    Protocol: ws
+    Host: localhost
+    Port: 1884
+    Basepath: ws
+    Username: "name_used_in_step11"
+    Password: "password_used_in_step11"
 
-1. Add env variables to you `nginx.conf` file.
-2. Copy it to `/etc/nginx/templates/nginx.conf.template` in the container (as opposed to your normal `/etc/nginx`).
-3. Set the `NGINX_ENVSUBST_OUTPUT_DIR: /etc/nginx` environment variable in `docker-compose.yml`.
+    if it works you should be connected to the broker and you should see the messages that are published in the chat.
 
-This will cause the `nginx.conf.template` file to be copied to `/etc/nginx` as `nginx.conf` and the environment variables will be replaced with their values.
 
-There is one caveat to keep in mind: using `command` property in `docker-compose.yml` seems to be disabling the extraction functionality. If you need to run a custom command to start-up nginx, you can use the Dockerfile version.
-
-## Example
-
-### Run
-
-#### No Dockerfile version
-
-```bash
-docker compose up nginx-no-dockerfile
-```
-
-#### Dockerfile version
-
-```bash
-docker compose build nginx-with-dockerfile
-docker compose up nginx-with-dockerfile
-```
-
-### Test
-
-Go to http://localhost:8081/example or http://localhost:8082/example depending on the version. You should see the contents of http://example.com proxied with the use of the environment variable.
