@@ -5,6 +5,7 @@
       volumes:
         - ./site/index.html:/usr/share/nginx/html/index.html
       ports:
+        - "443:443"
         - "80:80" 
         
 
@@ -15,7 +16,8 @@
       image: eclipse-mosquitto
       container_name: mqtt5
       ports:
-        - "1884:1884" #default mqtt port
+        - "1883:1883"
+        - "1884:1884" 
       volumes:
         - ./config:/mosquitto/config:rw
         - ./data:/mosquitto/data:rw
