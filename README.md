@@ -15,17 +15,17 @@ How to make a Chatt App in your webbrowser using nginx as webserver and MQTT as 
         - Add the directory path where OpenSSL is installed (e.g., `C:\OpenSSL-Win64\bin`) to the list of paths.
         - Click OK to save the changes.
 
-7. Use this command in the therminal in the C:\"yourPath"\docker\certificate file to make your own key and certificate with your own signature
-   openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
+7. Use this command in the therminal in the C:\"yourPath"\docker\certificates file to make your own key and certificate with your own signature
+   `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt`
    and follow the instructions that are given
 8. Create your own Authentication for your MQTT broker with your own name and password
 9. Download the MQTT client tool https://mosquitto.org/download/
 10. Do the same steps like in step 6.1 but then with the MQTT client tool
 11. Use this command to create a new user, they will ask to make a password
-    mosquitto_passwd -c C:\"yourPath"\docker\config\password.txt "yourName"
+   ` mosquitto_passwd -c C:\"yourPath"\docker\config\password.txt "yourName"`
 12. Now your MQTT broker will be authenticated and your webserver will be encrypted(SSL)
 13. Now it is time to start Docker and run MQTT and Nginx. You can do that with this command
-    C:\"yourPath"\docker\ docker compose up
+   ` C:\"yourPath"\docker\ docker compose up`
 14. In the docker desktop software you can check if your containers (MQTT, Nginx) is running it will be marked green if it is.
 15. Open two seperate tabs in your browser and go to this link https://localhost/ 
 16. if everything is working you can now chat with eachother using to diffrent tabs. (you can use diffrent webbrowsers for this)
