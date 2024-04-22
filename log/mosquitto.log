@@ -823,3 +823,141 @@ To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
 1710805662: Client Client_83 closed its connection.
 1710805722: New client connected from ::ffff:172.20.0.1:60028 as mqtt-explorer-cc7a23aa (p2, c1, k60, u'iqbal').
 1710805724: Client mqtt-explorer-cc7a23aa disconnected.
+1710806177: mosquitto version 2.0.18 terminating
+1710806177: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713785037: mosquitto version 2.0.18 starting
+1713785037: Config loaded from /mosquitto/config/mosquitto.conf.
+1713785037: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713785037: Opening websockets listen socket on port 1884.
+1713785037: mosquitto version 2.0.18 running
+1713785102: New client connected from ::ffff:172.18.0.1:40480 as Client_9 (p2, c1, k60).
+1713785113: New client connected from ::ffff:172.18.0.1:55978 as Client_7 (p2, c1, k60).
+1713785232: mosquitto version 2.0.18 terminating
+1713785232: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713785232: Client Client_7 closed its connection.
+1713785232: Client Client_9 closed its connection.
+1713785237: mosquitto version 2.0.18 starting
+1713785237: Config loaded from /mosquitto/config/mosquitto.conf.
+1713785237: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713785237: Opening websockets listen socket on port 1884.
+1713785237: mosquitto version 2.0.18 running
+1713785244: New client connected from ::ffff:172.18.0.1:34034 as Client_62 (p2, c1, k60).
+1713785247: New client connected from ::ffff:172.18.0.1:34038 as Client_6 (p2, c1, k60).
+1713785356: mosquitto version 2.0.18 terminating
+1713785356: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713785356: Client Client_6 closed its connection.
+1713785356: Client Client_62 closed its connection.
+1713785485: mosquitto version 2.0.18 starting
+1713785485: Config loaded from /mosquitto/config/mosquitto.conf.
+1713785485: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713785485: Opening websockets listen socket on port 1884.
+1713785485: mosquitto version 2.0.18 running
+1713785492: Client Client_66 closed its connection.
+1713785492: Client Client_66 closed its connection.
+1713785495: Client Client_21 closed its connection.
+1713785495: Client Client_21 closed its connection.
+1713785720: mosquitto version 2.0.18 terminating
+1713785720: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713785723: mosquitto version 2.0.18 starting
+1713785723: Config loaded from /mosquitto/config/mosquitto.conf.
+1713785723: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713785723: Opening websockets listen socket on port 1884.
+1713785723: mosquitto version 2.0.18 running
+1713785823: New client connected from ::ffff:172.18.0.1:33848 as mqtt-explorer-cc7a23aa (p2, c1, k60, u'iqbal').
+1713785828: Client mqtt-explorer-cc7a23aa disconnected.
+1713785879: New client connected from ::ffff:172.18.0.1:40018 as Client_3 (p2, c1, k60, u'iqbal').
+1713785902: New client connected from ::ffff:172.18.0.1:41132 as Client_22 (p2, c1, k60, u'iqbal').
+1713785941: Client Client_3 closed its connection.
+1713785943: Client Client_22 closed its connection.
+1713785953: Client Client_60 closed its connection.
+1713785953: Client Client_60 closed its connection.
+1713785966: New client connected from ::ffff:172.18.0.1:45746 as Client_99 (p2, c1, k60, u'iqbal').
+1713785976: New client connected from ::ffff:172.18.0.1:49166 as Client_60 (p2, c1, k60, u'iqbal').
+1713786060: mosquitto version 2.0.18 terminating
+1713786060: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786060: Client Client_60 closed its connection.
+1713786060: Client Client_99 closed its connection.
+1713786211: mosquitto version 2.0.18 starting
+1713786211: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786211: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786211: Opening websockets listen socket on port 1884.
+1713786211: mosquitto version 2.0.18 running
+1713786214: Client Client_50 closed its connection.
+1713786214: Client Client_50 closed its connection.
+1713786217: Client Client_91 closed its connection.
+1713786218: Client Client_91 closed its connection.
+1713786244: mosquitto version 2.0.18 terminating
+1713786244: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786258: mosquitto version 2.0.18 starting
+1713786258: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786258: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786258: Opening websockets listen socket on port 1884.
+1713786258: mosquitto version 2.0.18 running
+1713786261: Client Client_66 closed its connection.
+1713786261: Client Client_66 closed its connection.
+1713786282: mosquitto version 2.0.18 terminating
+1713786282: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786322: mosquitto version 2.0.18 starting
+1713786322: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786322: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786322: Opening websockets listen socket on port 1884.
+1713786322: mosquitto version 2.0.18 running
+1713786326: Client Client_92 closed its connection.
+1713786326: Client Client_92 closed its connection.
+1713786340: Client Client_96 closed its connection.
+1713786340: Client Client_96 closed its connection.
+1713786369: mosquitto version 2.0.18 terminating
+1713786369: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786447: mosquitto version 2.0.18 starting
+1713786447: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786447: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786447: Opening websockets listen socket on port 1884.
+1713786447: mosquitto version 2.0.18 running
+1713786461: New client connected from ::ffff:172.18.0.1:59948 as Client_79 (p2, c1, k60, u'iqbal').
+1713786471: New client connected from ::ffff:172.18.0.1:47086 as Client_99 (p2, c1, k60, u'iqbal').
+1713786480: Client Client_79 closed its connection.
+1713786481: Client Client_99 closed its connection.
+1713786486: New client connected from ::ffff:172.18.0.1:51308 as mqtt-explorer-cc7a23aa (p2, c1, k60, u'iqbal').
+1713786499: New client connected from ::ffff:172.18.0.1:60846 as Client_3 (p2, c1, k60, u'iqbal').
+1713786505: New client connected from ::ffff:172.18.0.1:39440 as Client_55 (p2, c1, k60, u'iqbal').
+1713786539: Client Client_55 closed its connection.
+1713786539: Client Client_3 closed its connection.
+1713786544: Client mqtt-explorer-cc7a23aa disconnected.
+1713786549: mosquitto version 2.0.18 terminating
+1713786549: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786625: mosquitto version 2.0.18 starting
+1713786625: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786625: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786625: Opening websockets listen socket on port 1884.
+1713786625: mosquitto version 2.0.18 running
+1713786641: Client Client_86 closed its connection.
+1713786641: Client Client_86 closed its connection.
+1713786646: Client Client_86 closed its connection.
+1713786647: Client Client_86 closed its connection.
+1713786649: Client Client_86 closed its connection.
+1713786649: Client Client_86 closed its connection.
+1713786654: Client Client_86 closed its connection.
+1713786654: Client Client_86 closed its connection.
+1713786666: mosquitto version 2.0.18 terminating
+1713786666: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713786670: mosquitto version 2.0.18 starting
+1713786670: Config loaded from /mosquitto/config/mosquitto.conf.
+1713786670: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1713786670: Opening websockets listen socket on port 1884.
+1713786670: mosquitto version 2.0.18 running
+1713786681: New client connected from ::ffff:172.18.0.1:50660 as Client_42 (p2, c1, k60, u'iqbal').
+1713786693: New client connected from ::ffff:172.18.0.1:38068 as Client_2 (p2, c1, k60, u'iqbal').
+1713786703: Client Client_2 closed its connection.
+1713786708: Client Client_42 closed its connection.
+1713786712: mosquitto version 2.0.18 terminating
+1713786712: Saving in-memory database to /mosquitto/data//mosquitto.db.

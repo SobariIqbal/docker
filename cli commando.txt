@@ -1,2 +1,0 @@
-docker compose build nginx-with-dockerfile;docker compose up nginx-with-dockerfile
-```

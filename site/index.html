@@ -39,6 +39,12 @@
         text-align: center;
         margin-bottom: 20px;
     }
+    #usernameInput,
+    #passwordInput,
+    #connectButton {
+        display: block;
+        margin-bottom: 10px;
+    }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -57,10 +63,24 @@
     client.onMessageArrived = onMessageArrived;
     
     // Connect the client
-    client.connect({onSuccess:onConnect});
+    function connectClient() {
+        var username = document.getElementById("usernameInput").value;
+        var password = document.getElementById("passwordInput").value;
+        client.connect({
+            onSuccess: function() {
+                onConnect(username, password);
+                // Hide username, password fields, and connect button after successful connection
+                document.getElementById("usernameInput").style.display = "none";
+                document.getElementById("passwordInput").style.display = "none";
+                document.getElementById("connectButton").style.display = "none";
+            },
+            userName: username,
+            password: password
+        });
+    }
     
     // Called when the client connects
-    function onConnect() {
+    function onConnect(username, password) {
         console.log("Connected to MQTT broker");
         // Subscribe to the topic
         client.subscribe(mqttTopic); // Subscribe to the common topic
@@ -128,6 +148,11 @@
 <body>
     <div class="container">
         <div id="messageDisplay"></div>
+        <div>
+            <input type="text" id="usernameInput" placeholder="Username">
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button id="connectButton" onclick="connectClient()">Connect</button>
+        </div>
         <div>
             <input type="text" id="messageInput" placeholder="Type your message...">
             <button onclick="publishMessage()">Send</button>
