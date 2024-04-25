@@ -2,6 +2,7 @@
   services:
     web:
       image: nginx
+      container_name: nginx
       volumes:
         - ./site/index.html:/usr/share/nginx/html/index.html
         - ./site/nginx.conf:/etc/nginx/conf.d/nginx.conf
