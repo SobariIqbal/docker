@@ -20,12 +20,12 @@
         - "1883:1883"
         - "1884:1884" 
       volumes:
-        - ./config:/mosquitto/config:rw
-        - ./data:/mosquitto/data:rw
-        - ./log:/mosquitto/log:rw
+        - ./config:/mosquitto/config
+        - ./data:/mosquitto/data
+        - ./log:/mosquitto/log
       restart: unless-stopped
 
-    # volumes for mapping data,config and log
+    
 
 
 

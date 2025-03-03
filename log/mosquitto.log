@@ -1243,3 +1243,33 @@ To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
 1739879863: Client Client_57 closed its connection.
 1739879871: mosquitto version 2.0.18 terminating
 1739879871: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1741007931: mosquitto version 2.0.18 starting
+1741007931: Config loaded from /mosquitto/config/mosquitto.conf.
+1741007931: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1741007931: Opening websockets listen socket on port 1884.
+1741007931: mosquitto version 2.0.18 running
+1741007944: mosquitto version 2.0.18 terminating
+1741007944: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1741007946: mosquitto version 2.0.18 starting
+1741007946: Config loaded from /mosquitto/config/mosquitto.conf.
+1741007946: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1741007946: Opening websockets listen socket on port 1884.
+1741007946: mosquitto version 2.0.18 running
+1741007984: mosquitto version 2.0.18 terminating
+1741007984: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1741007989: mosquitto version 2.0.18 starting
+1741007989: Config loaded from /mosquitto/config/mosquitto.conf.
+1741007989: Warning: File /mosquitto/config/password.txt has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/password.txt`.
+1741007989: Opening websockets listen socket on port 1884.
+1741007989: mosquitto version 2.0.18 running
+1741008040: Client Client_48 closed its connection.
+1741008040: Client Client_48 closed its connection.
+1741008042: Client Client_48 closed its connection.
+1741008042: Client Client_48 closed its connection.
+1741008046: New client connected from ::ffff:172.18.0.1:40346 as Client_48 (p2, c1, k60, u'iqbal').
+1741008056: New client connected from ::ffff:172.18.0.1:60366 as Client_25 (p2, c1, k60, u'iqbal').
+1741008062: Client Client_48 closed its connection.
+1741008063: Client Client_25 closed its connection.
