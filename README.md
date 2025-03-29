@@ -1,6 +1,6 @@
 How to make a Chatt App in your webbrowser using nginx as webserver and MQTT as broker, both running on docker. On **windows**
 1. Download docker here https://www.docker.com/products/docker-desktop/
-2. Download th zip file
+2. Download my zip file
 3. Delete the nginx-selfsigned.crt 
 4. Delete the nginx-selfsigned.key
 5. Make your own nginx-selfsigned.crt and nginx-selfsigned.key file
